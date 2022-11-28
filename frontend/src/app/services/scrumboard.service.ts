@@ -1,15 +1,25 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class ScrumboardService {
+export class ScrumboardService{
 
-  constructor(private _http:HttpClient) { }
+  constructor(private _http:HttpClient) {}
 
   get Points():Observable<Point[]> {
-    return this._http.get<Point[]>('http://localhost:5000/storypoints')
+    let auth_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlcyI6WyJhZG1pbiJdfQ.CdWxmHjUmRH7m7xqJokcTUgCRcDmoM2FMd5L7sRsNck";
+
+    const headers = new HttpHeaders({
+
+      'Content-Type': 'application/json',
+
+      'Authorization': `Bearer ${auth_token}`
+
+    });
+    const requestOptions = { headers: headers };
+    return this._http.get<Point[]>('http://localhost:5000/storypoints',requestOptions)
   }
 
   get Stories() {

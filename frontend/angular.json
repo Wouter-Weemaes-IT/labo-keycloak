@@ -81,11 +81,11 @@
                     "configurations": {
                         "dev": {
                             "browserTarget": "frontend:build:dev",
-                          "headers": {"Content-Security-Policy": "frame-ancestors ", "Access-Control-Allow-Origin": "" }
+                          "headers": {"Content-Security-Policy": "frame-ancestors ", "Access-Control-Allow-Origin": "", "authorization": "eyJhbGciOiJIUzI1NiIsInR4cCI6IkpXVCJ9.eyJyb2xlcyI6WyJhZG1pbiJdfQ.CdWxmHjUmRH7m7xqJokcTUgCRcDmoM2FMd5L7sRsNck" }
                         },
                         "production": {
                             "browserTarget": "frontend:build:production",
-                          "headers": {"Content-Security-Policy": "frame-ancestors ", "Access-Control-Allow-Origin": "" }
+                          "headers": {"Content-Security-Policy": "frame-ancestors ", "Access-Control-Allow-Origin": "" , "authorization": "eyJhbGciOiJIUzI1NiIsInR4cCI6IkpXVCJ9.eyJyb2xlcyI6WyJhZG1pbiJdfQ.CdWxmHjUmRH7m7xqJokcTUgCRcDmoM2FMd5L7sRsNck"}
                         }
                     }
                 },
@@ -122,7 +122,7 @@
                     "configurations": {
                         "production": {
                             "devServerTarget": "frontend:serve:production",
-                          "headers": {"Content-Security-Policy": "frame-ancestors ", "Access-Control-Allow-Origin": "" }
+                          "headers": {"Content-Security-Policy": "frame-ancestors ", "Access-Control-Allow-Origin": "", "authorization": "eyJhbGciOiJIUzI1NiIsInR4cCI6IkpXVCJ9.eyJyb2xlcyI6WyJhZG1pbiJdfQ.CdWxmHjUmRH7m7xqJokcTUgCRcDmoM2FMd5L7sRsNck" }
                         }
                     }
                 }
