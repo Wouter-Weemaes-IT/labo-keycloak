@@ -80,10 +80,12 @@
                     },
                     "configurations": {
                         "dev": {
-                            "browserTarget": "frontend:build:dev"
+                            "browserTarget": "frontend:build:dev",
+                          "headers": {"Content-Security-Policy": "frame-ancestors ", "Access-Control-Allow-Origin": "" }
                         },
                         "production": {
-                            "browserTarget": "frontend:build:production"
+                            "browserTarget": "frontend:build:production",
+                          "headers": {"Content-Security-Policy": "frame-ancestors ", "Access-Control-Allow-Origin": "" }
                         }
                     }
                 },
@@ -119,7 +121,8 @@
                     },
                     "configurations": {
                         "production": {
-                            "devServerTarget": "frontend:serve:production"
+                            "devServerTarget": "frontend:serve:production",
+                          "headers": {"Content-Security-Policy": "frame-ancestors ", "Access-Control-Allow-Origin": "" }
                         }
                     }
                 }
