@@ -13,7 +13,7 @@ export class ScrumboardService{
 
     const headers = new HttpHeaders({
 
-      'Content-Type': 'application/json',
+      'Accept': 'application/json',
 
       'Authorization': `Bearer ${auth_token}`
 
